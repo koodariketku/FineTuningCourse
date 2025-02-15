@@ -1,10 +1,11 @@
 ```mermaid
 sequenceDiagram
-    participant browser
-    participant server
+    participant Patient
+    participant Master Agent
+    participant Teleconsultation App
     
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate server
+    Patient->>Master Agent: Query: asking symptoms and asking questions
+
     server-->>browser: Redirect
     deactivate server
 
